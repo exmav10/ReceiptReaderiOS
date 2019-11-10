@@ -13,6 +13,9 @@
 		1711AE2522E4F2FF005C231F /* GoogleMLKit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1711AE2322E4F2FF005C231F /* GoogleMLKit.xcdatamodeld */; };
 		1711AE2722E4F301005C231F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1711AE2622E4F301005C231F /* Assets.xcassets */; };
 		1711AE2A22E4F301005C231F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1711AE2822E4F301005C231F /* LaunchScreen.storyboard */; };
+		1711AE3222E4F4DC005C231F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1711AE3122E4F4DC005C231F /* GoogleService-Info.plist */; };
+		174E7D652370A94700C194FF /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174E7D642370A94700C194FF /* Service.swift */; };
+		8E372FB89F1916C8D6CBC373 /* Pods_GoogleMLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A6359DE97E3F8C32F4B164 /* Pods_GoogleMLKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,11 @@
 		1711AE2622E4F301005C231F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1711AE2922E4F301005C231F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1711AE2B22E4F301005C231F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1711AE3122E4F4DC005C231F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		174E7D642370A94700C194FF /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		90A6359DE97E3F8C32F4B164 /* Pods_GoogleMLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleMLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF3C17225E0B9A90519A6B78 /* Pods-GoogleMLKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMLKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleMLKit/Pods-GoogleMLKit.debug.xcconfig"; sourceTree = "<group>"; };
+		F753D044E90575EB3B7326FB /* Pods-GoogleMLKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMLKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleMLKit/Pods-GoogleMLKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E372FB89F1916C8D6CBC373 /* Pods_GoogleMLKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		148640317C7C543AD32063BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90A6359DE97E3F8C32F4B164 /* Pods_GoogleMLKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1711AE1022E4F2FF005C231F = {
 			isa = PBXGroup;
 			children = (
 				1711AE1B22E4F2FF005C231F /* GoogleMLKit */,
 				1711AE1A22E4F2FF005C231F /* Products */,
+				A15C1060225B852A04CF5845 /* Pods */,
+				148640317C7C543AD32063BE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +75,7 @@
 		1711AE1B22E4F2FF005C231F /* GoogleMLKit */ = {
 			isa = PBXGroup;
 			children = (
+				1711AE3122E4F4DC005C231F /* GoogleService-Info.plist */,
 				1711AE1C22E4F2FF005C231F /* AppDelegate.swift */,
 				1711AE1E22E4F2FF005C231F /* ViewController.swift */,
 				1711AE2022E4F2FF005C231F /* Main.storyboard */,
@@ -63,8 +83,18 @@
 				1711AE2822E4F301005C231F /* LaunchScreen.storyboard */,
 				1711AE2B22E4F301005C231F /* Info.plist */,
 				1711AE2322E4F2FF005C231F /* GoogleMLKit.xcdatamodeld */,
+				174E7D642370A94700C194FF /* Service.swift */,
 			);
 			path = GoogleMLKit;
+			sourceTree = "<group>";
+		};
+		A15C1060225B852A04CF5845 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF3C17225E0B9A90519A6B78 /* Pods-GoogleMLKit.debug.xcconfig */,
+				F753D044E90575EB3B7326FB /* Pods-GoogleMLKit.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1711AE2E22E4F301005C231F /* Build configuration list for PBXNativeTarget "GoogleMLKit" */;
 			buildPhases = (
+				360E7297E0AB81ECB2A7D4FE /* [CP] Check Pods Manifest.lock */,
 				1711AE1522E4F2FF005C231F /* Sources */,
 				1711AE1622E4F2FF005C231F /* Frameworks */,
 				1711AE1722E4F2FF005C231F /* Resources */,
+				EBA71CFA67E4CB4F107AC701 /* [CP] Embed Pods Frameworks */,
+				AA986FD4CE3EE61DDED08A0E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1711AE2A22E4F301005C231F /* LaunchScreen.storyboard in Resources */,
+				1711AE3222E4F4DC005C231F /* GoogleService-Info.plist in Resources */,
 				1711AE2722E4F301005C231F /* Assets.xcassets in Resources */,
 				1711AE2222E4F2FF005C231F /* Main.storyboard in Resources */,
 			);
@@ -133,12 +167,96 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		360E7297E0AB81ECB2A7D4FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoogleMLKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA986FD4CE3EE61DDED08A0E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GoogleMLKit/Pods-GoogleMLKit-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleMobileVision/GoogleMVTextDetectorResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMVTextDetectorResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleMLKit/Pods-GoogleMLKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBA71CFA67E4CB4F107AC701 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GoogleMLKit/Pods-GoogleMLKit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleMLKit/Pods-GoogleMLKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1711AE1522E4F2FF005C231F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1711AE1F22E4F2FF005C231F /* ViewController.swift in Sources */,
+				174E7D652370A94700C194FF /* Service.swift in Sources */,
 				1711AE2522E4F2FF005C231F /* GoogleMLKit.xcdatamodeld in Sources */,
 				1711AE1D22E4F2FF005C231F /* AppDelegate.swift in Sources */,
 			);
@@ -284,6 +402,7 @@
 		};
 		1711AE2F22E4F301005C231F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF3C17225E0B9A90519A6B78 /* Pods-GoogleMLKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +421,7 @@
 		};
 		1711AE3022E4F301005C231F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F753D044E90575EB3B7326FB /* Pods-GoogleMLKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1027538596329-f9tst1oge358ufmu4trqo5puqjhpdkqo.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1027538596329-f9tst1oge358ufmu4trqo5puqjhpdkqo</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBzq9w5NPD3TBpY5xmEn7LAMYU2L1HgsLw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1027538596329</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.ingbanktr.INGMobile.GoogleMLKit</string>
+	<key>PROJECT_ID</key>
+	<string>mlkittextrecognition-b841e</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mlkittextrecognition-b841e.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1027538596329:ios:fefde202a3a08227</string>
+	<key>DATABASE_URL</key>
+	<string>https://mlkittextrecognition-b841e.firebaseio.com</string>
+</dict>
+</plist>
