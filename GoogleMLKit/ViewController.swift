@@ -40,7 +40,7 @@ final class ViewController: UIViewController, UIImagePickerControllerDelegate, U
         for i in 0..<resultText.count {
             if ( resultText[i] == "müsteri" || resultText[i] == "musteri" || resultText[i] == "musterı" || resultText[i] == "müsterı" || resultText[i] == "müşteri" || resultText[i] == "muşterı" || resultText[i] == "müşterı" || resultText[i] == "muşteri") && (resultText[i+1] == "no"){
                 for j in i..<resultText.count {
-                    if resultText[j].count == 10 {
+                    if resultText[j].count > 8 {
                         return resultText[j]
                     }
                 }
@@ -51,7 +51,7 @@ final class ViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     private func findContractNumber(_ visionText: VisionText) -> String {
         let stringMatrix = getTextLinebyLine(visionText)
-        for stringArrayidx in 0..<stringMatrix.count-2 {
+        for stringArrayidx in 0..<stringMatrix.count - 2 {
             let stringArray = stringMatrix[stringArrayidx]
             for elementidx in 0..<stringArray.count {
                 if stringArray[elementidx] == "hesap" && stringArray[elementidx+1] == "no" {
@@ -115,7 +115,7 @@ final class ViewController: UIViewController, UIImagePickerControllerDelegate, U
     private func uploadImage(_ imageToUpload: UIImage){
         Alamofire.upload(multipartFormData: { (multipartFormData) in
             if let data = imageToUpload.jpegData(compressionQuality: 1.0) {
-                multipartFormData.append(data, withName: "file",fileName: "deal_with_it.jpg", mimeType: "image/jpeg")
+                multipartFormData.append(data, withName: "file",fileName: "file.jpg", mimeType: "image/jpeg")
             } else {
                 print("Error: Failed to create data.")
             }
@@ -154,7 +154,7 @@ final class ViewController: UIViewController, UIImagePickerControllerDelegate, U
                 }
             }
             resultText = resultText.localizedLowercase
-            strongSelf.googleTextView.text = "Tutar: " + strongSelf.findFee(resultText.wordList) + "\n" + "Hesap No: " + strongSelf.findSubscriptionNumber(resultText.wordList) + "\n" + "Müşteri no: " + strongSelf.findContractNumber(result)
+            strongSelf.googleTextView.text = "Tutar: " + strongSelf.findFee(resultText.wordList) + "\n" + "Hesap No: " + strongSelf.findSubscriptionNumber(resultText.wordList) + "\n" + "Müşteri No: " + strongSelf.findContractNumber(result)
         }
     }
 }
